@@ -13,3 +13,4 @@ def get_binding(_type: str, provider: typing.Optional[str] = None) -> dict[str, 
     - raise KeyError if duplicate entry found
     """
 
+    return {}
