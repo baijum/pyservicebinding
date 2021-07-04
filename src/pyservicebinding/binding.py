@@ -1,3 +1,32 @@
+"""Kubernetes Service Binding Library for Python Applications
+
+Python module to retrieve bindings from a file-system created through an
+implementation of Service Binding Specification for Kubernetes
+(https://github.com/k8s-service-bindings/spec).
+
+The `ServiceBinding` object can be instantiated like this:
+
+    from pyservicebinding import binding
+    try:
+        sb = binding.ServiceBinding()
+    except binding.ServiceBindingRootMissingError as msg:
+        # log the error message and retry/exit
+        print("SERVICE_BINDING_ROOT env var not set")
+
+To get bindings for a specific `type`, say `postgres`:
+
+    bindings_list = sb.bindings("postgres")
+
+To get bindings for a specific `type`, say `mysql`, and `provider`, say
+`mariadb`:
+
+    bindings_list = sb.bindings("mysql", "mariadb")
+
+To get all bindings irrespective of the `type` and `provider`:
+
+    bindings_list = sb.all_bindings()
+"""
+
 import os
 import typing
 
@@ -8,6 +37,9 @@ class ServiceBindingRootMissingError(Exception):
 class ServiceBinding:
 
     def __init__(self):
+        """
+        - raise ServiceBindingRootMissingError if SERVICE_BINDING_ROOT env var not set
+        """
         try:
             self.root = os.environ["SERVICE_BINDING_ROOT"]
         except KeyError as msg:
