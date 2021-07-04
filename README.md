@@ -2,7 +2,7 @@
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/pyservicebinding)
 ![Release](https://img.shields.io/pypi/v/pyservicebinding)
 ![Supported Python Versions](https://img.shields.io/pypi/pyversions/pyservicebinding)
-[![Build](https://github.com/baijum/pyservicebinding/actions/workflows/python-package.yml/badge.svg?branch=main)](https://github.com/baijum/pyservicebinding/actions/workflows/python-package.yml)
+[![CI](https://github.com/baijum/pyservicebinding/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/baijum/pyservicebinding/actions/workflows/ci.yml)
 > Kubernetes Service Binding Library for Python Applications
 
 This is a Python module to retrieve bindings from a file-system created through
