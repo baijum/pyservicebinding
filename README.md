@@ -41,7 +41,7 @@ bindings_list = sb.bindings("mysql", "mariadb")
 To get all bindings irrespective of the `type` and `provider`:
 
 ```python
-bindings_list = sb.all_bindings("mariadb")
+bindings_list = sb.all_bindings()
 ```
 
 This is the complete API of the module:
