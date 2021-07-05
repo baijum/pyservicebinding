@@ -5,7 +5,10 @@ from pyservicebinding import binding
 
 def test_bindings(tmpdir, monkeypatch):
     bindings_dir = tmpdir.mkdir("bindings")
+    junk = bindings_dir.join("junk")
+    junk.write("junk text")
     sb1 = tmpdir.join("bindings").mkdir("sb1")
+    sb1.mkdir("sub1")
     _type = sb1.join("type")
     _type.write("mysql")
     username = sb1.join("username")
@@ -46,7 +49,10 @@ def test_bindings(tmpdir, monkeypatch):
 
 def test_all_bindings(tmpdir, monkeypatch):
     bindings_dir = tmpdir.mkdir("bindings")
+    junk = bindings_dir.join("junk")
+    junk.write("junk text")
     sb1 = tmpdir.join("bindings").mkdir("sb1")
+    sb1.mkdir("sub1")
     _type = sb1.join("type")
     _type.write("mysql")
     username = sb1.join("username")

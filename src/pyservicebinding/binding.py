@@ -54,8 +54,12 @@ class ServiceBinding:
         root = self.root
         l = []
         for dirname in os.listdir(root):
+            if not os.path.isdir(os.path.join(root, dirname)):
+                continue
             b = {}
             for filename in os.listdir(os.path.join(root, dirname)):
+                if not os.path.isfile(os.path.join(root, dirname, filename)):
+                    continue
                 b[filename] = open(os.path.join(root, dirname, filename)).read().strip()
 
             l.append(b)
@@ -74,6 +78,8 @@ class ServiceBinding:
         b = {}
         if provider:
             for dirname in os.listdir(root):
+                if not os.path.isdir(os.path.join(root, dirname)):
+                    continue
                 typepath = os.path.join(root, dirname, "type")
                 providerpath = os.path.join(root, dirname, "provider")
                 if os.path.exists(typepath):
@@ -86,11 +92,15 @@ class ServiceBinding:
                             continue
 
                         for filename in os.listdir(os.path.join(root, dirname)):
+                            if not os.path.isfile(os.path.join(root, dirname, filename)):
+                                continue
                             b[filename] = open(os.path.join(root, dirname, filename)).read().strip()
 
                         l.append(b)
         else:
             for dirname in os.listdir(root):
+                if not os.path.isdir(os.path.join(root, dirname)):
+                    continue
                 typepath = os.path.join(root, dirname, "type")
                 if os.path.exists(typepath):
                     typevalue = open(typepath).read().strip()
@@ -98,6 +108,8 @@ class ServiceBinding:
                         continue
 
                     for filename in os.listdir(os.path.join(root, dirname)):
+                        if not os.path.isfile(os.path.join(root, dirname, filename)):
+                            continue
                         b[filename] = open(os.path.join(root, dirname, filename)).read().strip()
 
                     l.append(b)
