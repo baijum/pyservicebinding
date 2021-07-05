@@ -91,7 +91,7 @@ def test_all_bindings(tmpdir, monkeypatch):
             assert b["password"] == "o4%bGt#D8v2i0ja"
             assert b["uri"] == "neo4j://192.168.94.103:7687/cr"
 
-    assert len(l) == 2
+    assert count == 2
 
 
 def test_missing_service_binding_root(tmpdir):
