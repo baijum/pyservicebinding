@@ -75,7 +75,6 @@ class ServiceBinding:
         """
         root = self.root
         l = []
-        b = {}
         if provider:
             for dirname in os.listdir(root):
                 if not os.path.isdir(os.path.join(root, dirname)):
@@ -91,6 +90,7 @@ class ServiceBinding:
                         if providervalue != provider:
                             continue
 
+                        b = {}
                         for filename in os.listdir(os.path.join(root, dirname)):
                             if not os.path.isfile(os.path.join(root, dirname, filename)):
                                 continue
@@ -107,6 +107,7 @@ class ServiceBinding:
                     if typevalue != _type:
                         continue
 
+                    b = {}
                     for filename in os.listdir(os.path.join(root, dirname)):
                         if not os.path.isfile(os.path.join(root, dirname, filename)):
                             continue
