@@ -1,9 +1,10 @@
 # pyservicebinding
+> **Kubernetes Service Binding Library for Python Applications**
+
 ![PyPI - Downloads](https://img.shields.io/pypi/dm/pyservicebinding)
 ![Release](https://img.shields.io/pypi/v/pyservicebinding)
 ![Supported Python Versions](https://img.shields.io/pypi/pyversions/pyservicebinding)
 [![CI](https://github.com/baijum/pyservicebinding/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/baijum/pyservicebinding/actions/workflows/ci.yml)
-> Kubernetes Service Binding Library for Python Applications
 
 The [Service Binding Specification][spec] for Kubernetes standardizes exposing
 backing service secrets to applications.  This project provides a Python module
