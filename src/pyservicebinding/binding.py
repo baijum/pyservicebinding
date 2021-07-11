@@ -13,9 +13,9 @@ The `ServiceBinding` object can be instantiated like this:
         # log the error message and retry/exit
         print("SERVICE_BINDING_ROOT env var not set")
 
-To get bindings for a specific `type`, say `postgres`:
+To get bindings for a specific `type`, say `postgresql`:
 
-    bindings_list = sb.bindings("postgres")
+    bindings_list = sb.bindings("postgresql")
 
 To get bindings for a specific `type`, say `mysql`, and `provider`, say
 `mariadb`:

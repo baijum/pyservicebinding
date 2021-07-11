@@ -26,10 +26,10 @@ except binding.ServiceBindingRootMissingError as msg:
     print("SERVICE_BINDING_ROOT env var not set")
 ```
 
-To get bindings for a specific `type`, say `postgres`:
+To get bindings for a specific `type`, say `postgresql`:
 
 ```python
-bindings_list = sb.bindings("postgres")
+bindings_list = sb.bindings("postgresql")
 ```
 
 To get bindings for a specific `type`, say `mysql`, and `provider`, say `mariadb`:
