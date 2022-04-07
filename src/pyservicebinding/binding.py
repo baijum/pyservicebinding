@@ -1,6 +1,6 @@
 """Kubernetes Service Binding Library for Python Applications
 
-The Service Binding Specification (https://github.com/k8s-service-bindings/spec)
+The Service Binding Specification (https://github.com/servicebinding/spec)
 for Kubernetes standardizes exposing backing service secrets to applications.
 This project provides a Python module to consume the bindings projected into the
 container.  The Application Projection section of the spec describes how the

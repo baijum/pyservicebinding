@@ -116,5 +116,5 @@ class ServiceBinding:
         """
 ```
 
-[spec]: https://github.com/k8s-service-bindings/spec
-[application-projection]: https://github.com/k8s-service-bindings/spec#application-projection
+[spec]: https://github.com/servicebinding/spec
+[application-projection]: https://github.com/servicebinding/spec#application-projection
