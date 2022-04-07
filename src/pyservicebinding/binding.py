@@ -84,7 +84,7 @@ class ServiceBinding:
             raise ServiceBindingRootMissingError(msg)
 
 
-    def all_bindings(self) -> list[dict[str, str]]:
+    def all_bindings(self) -> typing.List[typing.Dict[str, str]]:
         """Get all bindings as a list of dictionaries
 
         - return empty list if no bindings found
@@ -104,7 +104,7 @@ class ServiceBinding:
 
         return l
 
-    def bindings(self, _type: str, provider: typing.Optional[str] = None) -> list[dict[str, str]]:
+    def bindings(self, _type: str, provider: typing.Optional[str] = None) -> typing.List[typing.Dict[str, str]]:
         """Get filtered bindings as a list of dictionaries
 
         - return empty dictionary if no binding found
